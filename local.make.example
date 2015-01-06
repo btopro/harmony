@@ -1,0 +1,17 @@
+; harmony make file for local development
+core = "7.x"
+api = "2"
+
+projects[drupal][version] = "7.x"
+; include the d.o. profile base
+includes[] = "drupal-org.make"
+
+; +++++ Libraries +++++
+
+; harmony
+libraries[harmony][type] = "profile"
+libraries[harmony][destination] = "../../profiles"
+libraries[harmony][download][type] = "git"
+libraries[harmony][download][branch] = "7.x-1.x"
+libraries[harmony][directory_name] = "harmony"
+libraries[harmony][download][url] = "https://github.com/btopro/harmony"
